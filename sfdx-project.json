@@ -1,12 +1,23 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "source/manage-expenses",
       "default": true
+    },
+    {
+      "path": "source/oops",
+      "default": false,
+      "package": "oops",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": ""
     }
   ],
   "name": "ManageExpenses",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "58.0"
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+    "oops": "0Ho8a000000blO4CAI"
+  }
 }
