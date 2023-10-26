@@ -23,6 +23,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>TransactionLookup__c.Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>TransactionLookup__c.Item_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>TransactionLookup__c.Sub_Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Transaction__c.Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -61,6 +76,9 @@
         <layout>Expense__c-Expense Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>TransactionLookup__c-TransactionLookup Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Transaction__c-Transaction Layout</layout>
     </layoutAssignments>
     <objectPermissions>
@@ -96,6 +114,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>TransactionLookup__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Transaction__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -109,6 +136,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Expense__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>TransactionLookup__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
