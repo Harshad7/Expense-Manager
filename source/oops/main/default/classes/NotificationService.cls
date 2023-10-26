@@ -9,6 +9,9 @@ public with sharing class NotificationService {
     }
 
 
+public class NotificationException extends Exception{
+    
+}
    
 }
 

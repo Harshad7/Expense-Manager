@@ -5,8 +5,12 @@ public with sharing class NotificationFactory {
     };
 
     public static INotificationService newInstance(String type){
+        if(typeToImplementation.get(type) == null){
+            throw new NotificationService.NotificationException('Invalid type for Notification');
+        }
         return (INotificationService) typeToImplementation.get(type).newInstance();
     }
 
 
 }
+
