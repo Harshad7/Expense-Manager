@@ -5,6 +5,14 @@
       "default": true
     },
     {
+      "path": "source/apex-common",
+      "default": false
+    },
+    {
+      "path": "source/apex-mocks",
+      "default": false
+    },
+    {
       "path": "source/oops",
       "default": false,
       "package": "oops",
