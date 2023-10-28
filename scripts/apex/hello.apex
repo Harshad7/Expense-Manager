@@ -8,3 +8,9 @@
 NotificationService ns = new NotificationService();
 ns.sendNotification('est', 'Here is an SMS');
 //ns.sendNotification('email', 'Here is an Email');
+
+TransactionLookupSelector tus= new TransactionLookupSelector();
+
+system.debug(tus.selectAllTU());
+
+system.debug(TransactionLookupSelector.newInstance().selectAllTU());

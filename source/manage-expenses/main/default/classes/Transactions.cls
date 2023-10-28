@@ -1,5 +1,7 @@
 public inherited sharing class Transactions extends fflib_SObjectDomain {
 
+   
+
     public Transactions(List<Transaction__c> transactionRecords){
         super(transactionRecords);
     }
@@ -16,7 +18,19 @@ public inherited sharing class Transactions extends fflib_SObjectDomain {
 
     public override void onBeforeInsert(){
 
-        for(TransactionLookup__c tu : [select Name, Sub_Category__c, Item_Name__c, Category__c from TransactionLookup__c]){
+        //transactionLookUpSelector = new TransactionLookupSelector();
+        categorizeTransactions();
+
+    }
+
+    public override void onAfterInsert(){
+        for(Transaction__c t : (List<Transaction__c>)Records){
+            system.debug('Got the Category' +t.Category__c);
+        }
+    }
+
+    public void categorizeTransactions(){
+        for(TransactionLookup__c tu : TransactionLookupSelector.newInstance().selectAllTU()){
             nametoTransactionLU.put(tu.Name, tu);
         }
 
@@ -31,10 +45,7 @@ public inherited sharing class Transactions extends fflib_SObjectDomain {
                 }
             }
         }
-
     }
-
-    
 
 
 

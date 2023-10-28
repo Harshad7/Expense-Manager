@@ -1,4 +1,4 @@
 public Interface ITransactionService {
-    void categorizeTransactions(List<TransactionService.InputTransaction> inputTransactions);
-    void addTransactions(List<TransactionService.InputTransaction> inputTransactions);
+    void categorizeTransactions(List<Transaction__c> inputTransactions);
+    void addTransactions(List<Transaction__c> inputTransactions);
 }
